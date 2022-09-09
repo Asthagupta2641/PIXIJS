@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "cardback.png",
+	"frame": {"x":1,"y":1,"w":1032,"h":1530},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1032,"h":1530},
+	"sourceSize": {"w":1032,"h":1530}
+},
+{
+	"filename": "smilies.jpg",
+	"frame": {"x":1035,"y":1,"w":600,"h":900},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":900},
+	"sourceSize": {"w":600,"h":900}
+},
+{
+	"filename": "wel.png",
+	"frame": {"x":1355,"y":903,"w":222,"h":227},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":222,"h":227},
+	"sourceSize": {"w":222,"h":227}
+},
+{
+	"filename": "welcomeimg.png",
+	"frame": {"x":1035,"y":903,"w":318,"h":159},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":318,"h":159},
+	"sourceSize": {"w":318,"h":159}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "webpack.png",
+	"format": "RGBA8888",
+	"size": {"w":1636,"h":1532},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c5f06331bea151f8e4238bf82e3987e1:13192f6b3f0ddad035b09687c6ae0ba8:59d3cc547ed5ffe0a09dfea644125324$"
+}
+}
