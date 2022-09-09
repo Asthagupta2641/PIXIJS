@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../Desktop/PIXI/PIXIJS"
+		},
+		{
+			"path": "../../../../../ig-training-09-22-main/ig-training-09-22-main/pixi/sept-07/assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PIXIJS"
+	}
+}
