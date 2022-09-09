@@ -7,7 +7,7 @@
       document.getElementById("game").append(game.view);
       loadAssets([
         { name: "back", url: "/assets/cardback.png" },
-        { name: "front", url: "assets/smilies.jpg" },
+        { name: "front", url: "/assets/smilies.jpg" },
       ], start);
       //------------------------------
       const pBar = document.getElementById("bar");
@@ -34,9 +34,38 @@
         //   const back = PIXI.Sprite.from(resources['back'].texture);
         //   back.scale.set(0.2);
         //   game.stage.addChild(back);
-          const smily = new PIXI.Texture(resources['front'].texture,new PIXI.Rectangle(0,0,150,150));
-          const front = PIXI.Sprite.from(smily);
-          front.scale.set(0.2);
-          game.stage.addChild(front);
-          console.log('hi');
-      }
+          for(let i=0;i<5;i++)
+          {
+           
+              const smily = new PIXI.Texture(resources['front'].texture,new PIXI.Rectangle(42,0,160,160));
+              const front = PIXI.Sprite.from(smily);
+              // front.scale.set(0.5);
+             // front.x=(j%14)*50;
+              //front.y=Math.floor(i/14)*500;
+               
+              front.scale.set(.3);
+
+              game.stage.addChild(front);
+              console.log('hi');
+            }
+            // {
+            //   const smily1 = new PIXI.Texture(resources['front'].texture,new PIXI.Rectangle(45,0,15,15));
+            //   const front1= PIXI.Sprite.from(smily1);
+            //   front.scale.set(0.5);
+            //   game.stage.addChild(front1);
+            //   console.log('hi');
+            // }
+          }
+        
+         
+
+
+          // const smily1 = new PIXI.Texture(resources['front'].texture,new PIXI.Rectangle(45,0,15,15));
+          // const front1= PIXI.Sprite.from(smily1);
+          // front.scale.set(0.5);
+          // game.stage.addChild(front1);
+          // console.log('hi');
+
+          
+      
+
