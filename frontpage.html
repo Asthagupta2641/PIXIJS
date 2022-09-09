@@ -24,44 +24,50 @@
 <body>
     <div id="progress"></div> 
     <SCRIPT>
-        console.log('Pixi', PIXI);
-        const game = new PIXI.Application({
-            width:innerWidth,
-            height:innerHeight,
-            backgroundColor:0x2980b9
+        // console.log('Pixi', PIXI);
+        // const game = new PIXI.Application({
+        //     width:innerWidth,
+        //     height:innerHeight,
+        //     backgroundColor:0x2980b9
             
 
-        });
-        console.log('pixi instance',game);
-        document.body.appendChild(game.view);
-        const hello = new PIXI.Text('Welcome in Memory Game');
-        hello.x=innerWidth/2;
-        hello.y=innerHeight/2;
-        hello.z = 2;
-        hello.anchor.set(0.5);
-        game.stage.addChild(hello);
-        game.loader.add('page','./assets/wel.png').load(
-            ()=>{
-                const car = PIXI.Sprite.from('page');
-                
-                game.stage.addChild(page);
-                game.stage.addChild(hello);
-                // const car1 = PIXI.Sprite.from('');
-                // game.stage.addChild(car1);
+        // });
+        // console.log('pixi instance',game);
+        // document.body.appendChild(game.view);
+        // const hello = new PIXI.Text('Welcome in Memory Game');
+        // const frontpage = new PIXI.Text('frontpage',"./index.html")
+        // hello.x=innerWidth/2;
+        // hello.y=innerHeight/2;
+        // hello.z = 2;
+        // hello.anchor.set(0.5);
+        // game.stage.addChild(hello);
+        // game.loader.add('page','./assets/wel.png').load(
+        //     ()=>{
+        //         const car = PIXI.Sprite.from('page');
+        //         game.stage.addChild(frontpage);
+        //         game.stage.addChild(page);
+        //         game.stage.addChild(hello);
+        //         // const car1 = PIXI.Sprite.from('');
+        //         // game.stage.addChild(car1);
                
-            }
-        );
-        let pDiv=document.getElementById('progress');
-        game.loader.onProgress.add((e)=>{
-            console.log('loader',e.progress);
-            pDiv.style.width = e.progress+"%";
-            // if(e.progress ===100){
-            //     pDiv.style.width=0;
-            // }
-        })
+        //     }
+        // );
+       
+        // let pDiv=document.getElementById('progress');
+        // game.loader.onProgress.add((e)=>{
+        //     console.log('loader',e.progress);
+        //     pDiv.style.width = e.progress+"%";
+        //     // if(e.progress ===100){
+        //     //     pDiv.style.width=0;
+        //     // }
+        // })
         
       
-      
+let app = new PIXI.Application({ width: 1360, height: 640 });
+document.body.appendChild(app.view);
+
+
+
     </SCRIPT>
     
 </body>

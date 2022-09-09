@@ -1,4 +1,3 @@
-// Create the application helper and add its render target to the page
 let app = new PIXI.Application({ width: 640, height: 360 });
 document.body.appendChild(app.view);
 
