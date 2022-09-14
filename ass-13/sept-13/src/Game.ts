@@ -2,11 +2,12 @@ import {Application, Sprite} from 'pixi.js';
 import {gsap} from 'gsap';
 export class Game extends Application{
     private spin:boolean;
-    private sliceAngle = 360/7;
+    private sliceAngle = 360/12;
     constructor(opts:any) {
         super(opts);
         this.preload([
-            {name:'wheel', url:'assets/wheel.png'}
+            {name:'wheel', url:'assets/wheelofspine-removebg-preview.png'}
+           
         ], this.onLoad.bind(this));
     }
     preload(list:any[], cb:()=>{}):void {
@@ -23,7 +24,7 @@ export class Game extends Application{
         wheel.buttonMode = true;
         console.log(this.stage);
         wheel.on('pointerup', ()=>{
-            let random = Math.floor(Math.random()*7);
+            let random = Math.floor(Math.random()*12);
             let stopAngle = random * this.sliceAngle;
             gsap.fromTo(wheel,{angle:0},{angle:3600+stopAngle, duration:5, ease:'expo.out'});
         });
