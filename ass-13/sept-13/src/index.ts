@@ -4,8 +4,15 @@ import './css/main.css';
 window.onload = ()=>{
     const gameDiv:HTMLDivElement = <HTMLDivElement>document.getElementById('game');
     const app:Application = new Game({
-        resizeTo: gameDiv,
-        backgroundColor: 0x996633,
+        width:innerWidth,
+        height:innerHeight,
+        //resizeTo: gameDiv,
+        
+        //backgroundColor: 0xC3869D
+        backgroundColor:0xB28293
+
+        ,
+        
         sharedLoader: true,
         sharedTicker: true
     });
