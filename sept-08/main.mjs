@@ -4,14 +4,20 @@ import { loadAssets } from "./js/loader.mjs";
 
 export function createGame(div) {
     const game = new Application({
-        width:1024,
-        height:920,
-        backgroundColor:0x2266FF,
-        resizeTo: div
+        width:innerWidth,
+        height:innerHeight,
+        
+       
+        
+        //backgroundColor:0x2266FF,
+        backgroundColor:0x27DDE4,
+        //resizeTo: div
     });
+    // game.x=800;
     console.log('game', game);
     div.appendChild(game.view);
     return game;
+    
 }
 
 const game = createGame(document.getElementById('game'));

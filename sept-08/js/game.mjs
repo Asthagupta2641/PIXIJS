@@ -52,7 +52,7 @@ export function start(app) {
 function drawCards(stage) {
   let cardNum = 0;
   const cards = [];
-  const offsetX = 10;
+  const offsetX = 200;
   const offsetXY = 10;
   const paddingX = 10;
   const paddingY = 10;
