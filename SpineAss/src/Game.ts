@@ -25,12 +25,12 @@ export class Game extends Application {
   onLoad(): void {
     this.stage.interactive = true;
 
-    /*    const gob = new Spine(getResource("goblin").spineData);
+    const gob = new Spine(getResource("goblin").spineData);
     gob.skeleton.setSkinByName("goblin");
     gob.skeleton.setSlotsToSetupPose();
     gob.state.setAnimation(0, "walk", true);
-    gob.x = this.screen.width / 2;
-    gob.y = this.screen.height;
+    gob.x = this.screen.width/1.5;
+    gob.y = this.screen.height/2;
     this.stage.addChild(gob);
 
     this.stage.on("pointertap", () => {
@@ -40,9 +40,9 @@ export class Game extends Application {
       gob.skeleton.setSkinByName(newSkinName);
       gob.skeleton.setSlotsToSetupPose();
     });
-    */
+  
     const hero = new Spine(getResource("boy").spineData);
-    hero.x = this.screen.width / 2;
+    hero.x = this.screen.width /4;
     hero.y = this.screen.height;
     hero.scale.set(0.5);
     hero.skeleton.setSlotsToSetupPose();
