@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.2/browser/pixi.js" integrity="sha512-XHX32YCocEDCIiENmO7pf91TtRITLfCagN+uLlj9sJ7RUVBHN1JZtlfb02x4OyXfkuQegd1u6i9mzpRMg+w5xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        *{
+            margin: 0;
+        }
+        #progress{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: green;
+            height: 3px;
+            width: 10px;
+            z-index: 1999;
+        }
+    </style>
+</head>
+<body>
+    <div id="progress"></div>
+    <script>
+        console.log("Pixi ",PIXI);
+        const game= new PIXI.Application({
+            width:innerWidth,
+            height:innerHeight,
+            backgroundColor:0xb937ed,
+        });
+        console.log('pixi instance ',game)
+        
+        //add text
+        const hello =new PIXI.Text('Hello world');
+        hello.x=innerWidth/2;
+        hello.y=innerHeight/2;
+        hello.anchor.set(0.5);
+        // hello.pivot.set(0.5);
+        // game.stage.addChild(hello);
+        
+        game.loader.add('car','https://cdn.pixabay.com/photo/2017/02/01/12/23/car-2030056_960_720.png')
+        .add('cars','https://cdn.pixabay.com/photo/2016/04/01/12/04/game-1300503_960_720.png')
+        .load(
+            ()=>{
+                document.body.appendChild(game.view);
+                const car = PIXI.Sprite.from('car');
+                game.stage.addChild(car);
+                game.stage.addChild(hello);
+                const cars = PIXI.Sprite.from('cars');
+                game.stage.addChild(cars);
+                const car1= PIXI.Sprite.from("https://cdn.pixabay.com/photo/2013/07/12/14/55/racing-car-149034_1280.png");
+                game.stage.addChild(car1);
+                car.x=innerWidth/5;
+                car.y=innerHeight/4;
+                car1.x=10;
+                car1.y=20;
+                car1.width=300
+                car1.height=200
+                cars.x=950;
+                cars.y=30;
+                cars.width=300;
+                cars.height=200;
+            }
+            );
+            let pdiv= document.getElementById("progress");
+            game.loader.onProgress.add((e)=>{
+            console.log("loader",e.progress);
+            pdiv.style.width=e.progress+"%";
+            // if(e.progress === 100){
+            //     pdiv.style.width=0;
+            // }
+        })
+
+    </script>
+</body>
+
+</html>
